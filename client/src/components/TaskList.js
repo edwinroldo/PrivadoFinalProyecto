@@ -4,13 +4,13 @@ import {useNavigate} from 'react-router-dom'
 
 export default function TaskList() {
 
-  const HOST_SERV = process.env.HOST_SERV || 'http://localhost:4000';
+  const HOSTSERV = process.env.HOSTSERV || 'http://localhost:4000';
 
   const [tareas, setTask] = useState([])
   const navigate = useNavigate()
 
   const cargarTareas = async() => {
-    const respuesta_lista_tareas = await fetch(`${HOST_SERV}/tasks`);
+    const respuesta_lista_tareas = await fetch(`${HOSTSERV}/tasks`);
     const datos_lista_tarea = await respuesta_lista_tareas.json()
     setTask(datos_lista_tarea)
     console.log(datos_lista_tarea)
@@ -18,7 +18,7 @@ export default function TaskList() {
 
   const eliminaDatos = async (id_tarea) => {
       try {
-        await fetch(`${HOST_SERV}/tasks/${id_tarea}`,{
+        await fetch(`${HOSTSERV}/tasks/${id_tarea}`,{
           method:"DELETE",
         })
        

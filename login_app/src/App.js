@@ -7,12 +7,12 @@ import {Button, Divider, Grid2, Link, TextField, Typography} from '@mui/material
 
 function App() {
   
-  const URL_MENU = process.env.URL_MENU || 'http://localhost:3000/'
+  const URLMENU = process.env.URLMENU || 'http://localhost:3000/';
 
-console.log('URL_MENU',URL_MENU);
+console.log('URLMENU',URLMENU);
 
   const handleClick = () =>{
-    window.location.href = URL_MENU;
+    window.location.href = URLMENU;
   }
       
 
