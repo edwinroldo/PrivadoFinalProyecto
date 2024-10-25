@@ -12,6 +12,9 @@ const pool = new Pool({
     host: DB_HOST,
     port: DB_PORT,
     database: DB_DATABASE,
+    ssl:{
+        rejectUnauthorized: false
+    },
 })
 
 pool.connect((err) => {
