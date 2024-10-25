@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom'
 
 export default function TaskList() {
 
-  const HOSTSERV = process.env.HOSTSERV || 'http://localhost:4000';
+  const HOSTSERV = process.env.REACT_APP_HOSTSERV || 'http://localhost:4000';
 
   const [tareas, setTask] = useState([])
   const navigate = useNavigate()

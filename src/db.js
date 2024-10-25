@@ -14,4 +14,13 @@ const pool = new Pool({
     database: DB_DATABASE,
 })
 
+pool.connect((err) => {
+    if (err) {
+        console.error('Error connecting to the database', err);
+    } else {
+        console.log('Connected to the database');
+    }
+});
+
+
 module.exports = pool;

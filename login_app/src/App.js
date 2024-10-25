@@ -7,7 +7,7 @@ import {Button, Divider, Grid2, Link, TextField, Typography} from '@mui/material
 
 function App() {
   
-  const URLMENU = process.env.URLMENU || 'http://localhost:3000/';
+  const URLMENU = process.env.REACT_APP_URLMENU || 'http://localhost:3000/';
 
 console.log('URLMENU',URLMENU);
 
