@@ -9,6 +9,8 @@ function App() {
   
   const URL_MENU = process.env.URL_MENU || 'http://localhost:3000/'
 
+console.log('URL_MENU',URL_MENU);
+
   const handleClick = () =>{
     window.location.href = URL_MENU;
   }
@@ -46,7 +48,7 @@ function App() {
                     name='usuario' 
                     fullWidth 
                     label='Usuario' 
-                    type='usuario'
+                    type='text'
                      
                 />
             </Grid2>
