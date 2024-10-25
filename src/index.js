@@ -28,6 +28,6 @@ app.use((err, req, res, next) => {
 // Asignamos puerto al servidor que funcionará en el puerto 4000
 const PORT = process.env.PORT || 4000;
 
-app.listen(PORT_SERV, function() {
+app.listen(PORT, function() {
     console.log('Servidor en puerto', PORT);
 });
