@@ -14,7 +14,7 @@ export default function TaskList() {
     const datos_lista_tarea = await respuesta_lista_tareas.json();
     setTask(datos_lista_tarea);
     console.log(datos_lista_tarea);
-  };[HOSTSERV];
+  };
 
   const eliminaDatos = async (id_tarea) => {
       try {
