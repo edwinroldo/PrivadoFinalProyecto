@@ -6,15 +6,15 @@ export default function TaskList() {
 
   const HOSTSERV = process.env.REACT_APP_HOSTSERV || 'http://localhost:4000';
 
-  const [tareas, setTask] = useState([])
-  const navigate = useNavigate()
+  const [tareas, setTask] = useState([]);
+  const navigate = useNavigate();
 
   const cargarTareas = async() => {
     const respuesta_lista_tareas = await fetch(`${HOSTSERV}/tasks`);
     const datos_lista_tarea = await respuesta_lista_tareas.json()
     setTask(datos_lista_tarea)
     console.log(datos_lista_tarea)
-  }
+  };
 
   const eliminaDatos = async (id_tarea) => {
       try {
@@ -32,7 +32,7 @@ export default function TaskList() {
 
   useEffect(() => {
     cargarTareas()
-  }, [])
+  }, [cargarTareas]);
 
   return (
     <>
