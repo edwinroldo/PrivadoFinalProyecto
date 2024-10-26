@@ -6,13 +6,14 @@ import {useNavigate} from 'react-router-dom'
 
 export default function TaskList() {
 
-  const HOSTSERV = process.env.HOSTSERV || 'http://localhost:4000';
+  //const HOSTSERV = process.env.HOSTSERV || 'http://localhost:4000';
 
   const [tareas, setTask] = useState([]);
   const navigate = useNavigate();
 
   const cargarTareas = async() => {
-    const respuesta_lista_tareas = await fetch(`${HOSTSERV}/tasks`);
+    //const respuesta_lista_tareas = await fetch(`${HOSTSERV}/tasks`);
+    const respuesta_lista_tareas = await fetch('https://backend-final-tny3.onrender.com/tasks');
     const datos_lista_tarea = await respuesta_lista_tareas.json();
     setTask(datos_lista_tarea);
     console.log(datos_lista_tarea);
@@ -20,7 +21,7 @@ export default function TaskList() {
 
   const eliminaDatos = async (id_tarea) => {
       try {
-        await fetch(`${HOSTSERV}/tasks/${id_tarea}`,{
+        await fetch(`https://backend-final-tny3.onrender.com/tasks/${id_tarea}`,{
           method:"DELETE",
         })
        

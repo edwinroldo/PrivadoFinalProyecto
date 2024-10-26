@@ -1,7 +1,7 @@
 import {Card, CardContent, Grid, TextField, Typography, Button, CircularProgress} from '@mui/material';
 import {useState, useEffect} from 'react'
 import {useNavigate, useParams} from 'react-router-dom'
-import HOSTSERV from './TaskList';
+//import HOSTSERV from './TaskList';
 
 
 
@@ -27,7 +27,7 @@ export default function TaskForm() {
 
       if (editing){
         //console.log('update')
-        await fetch(`${HOSTSERV}/tasks/${params.id_tarea}`, {
+        await fetch(`https://backend-final-tny3.onrender.com/tasks/${params.id_tarea}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export default function TaskForm() {
         
       } else{
         //enviar api hasta back para guardar datos y respuesta guarda esa información
-      await fetch(`${HOSTSERV}/tasks`, {
+      await fetch(`https://backend-final-tny3.onrender.com/tasks`, {
         //el tipo de metodo a utilizar
         method: 'POST',
         //a travez de body convierto de JSON  a string
@@ -58,7 +58,7 @@ export default function TaskForm() {
     setTask({...tarea, [e.target.name]: e.target.value});
   
     const cargarTarea = async (id) => {
-      const respuesta = await fetch(`${HOSTSERV}/tasks/${id}`)
+      const respuesta = await fetch(`https://backend-final-tny3.onrender.com/tasks/${id}`)
       const datos = await respuesta.json()
       setTask({nombre_tarea: datos.nombre_tarea, descripcion_tarea: datos.descripcion_tarea})
       setEditing(true)

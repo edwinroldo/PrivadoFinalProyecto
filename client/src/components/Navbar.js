@@ -5,12 +5,12 @@ import {Link, useNavigate} from 'react-router-dom'
 
 export default function Navbar() {
 
-    const URLLOGIN = process.env.URLLOGIN || 'http://localhost:3001/'
+    //const URLLOGIN = process.env.URLLOGIN || 'http://localhost:3001/'
 
     const navigate = useNavigate()
 
     const handleClick = () => {
-        window.location.href = URLLOGIN;
+        window.location.href = 'https://loginproyecto.onrender.com';
       };
 
   return (
