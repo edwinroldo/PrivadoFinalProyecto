@@ -1,3 +1,4 @@
+//se importa la clase Pool del módulo 'pg' para manejar conexiones a PostgreSQL
 const {Pool} = require('pg')
 
 const DB_USER = process.env.DB_USER || 'postgres';

@@ -7,12 +7,12 @@ import {Button, Divider, Grid2, Link, TextField, Typography} from '@mui/material
 
 function App() {
   
-  const URLMENU = process.env.REACT_APP_URLMENU || 'http://localhost:3000/';
+  //const URLMENU = process.env.REACT_APP_URLMENU || 'http://localhost:3000/';
 
-console.log('URLMENU',URLMENU);
+//console.log('URLMENU',URLMENU);
 
   const handleClick = () =>{
-    window.location.href = URLMENU;
+    window.location.href = 'https://listatareas-o3yo.onrender.com/';
   }
       
 
