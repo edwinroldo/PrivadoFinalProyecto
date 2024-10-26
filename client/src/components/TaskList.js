@@ -11,10 +11,10 @@ export default function TaskList() {
 
   const cargarTareas = async() => {
     const respuesta_lista_tareas = await fetch(`${HOSTSERV}/tasks`);
-    const datos_lista_tarea = await respuesta_lista_tareas.json()
-    setTask(datos_lista_tarea)
-    console.log(datos_lista_tarea)
-  };
+    const datos_lista_tarea = await respuesta_lista_tareas.json();
+    setTask(datos_lista_tarea);
+    console.log(datos_lista_tarea);
+  };[HOSTSERV];
 
   const eliminaDatos = async (id_tarea) => {
       try {
@@ -31,7 +31,7 @@ export default function TaskList() {
   }
 
   useEffect(() => {
-    cargarTareas()
+    cargarTareas();
   }, [cargarTareas]);
 
   return (
