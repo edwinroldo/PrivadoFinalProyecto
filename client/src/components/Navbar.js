@@ -1,7 +1,7 @@
 import { AppBar, Box, Button, Container, Toolbar, Typography } from '@mui/material'
 import {Link, useNavigate} from 'react-router-dom'
 
-require('dotenv').config();
+
 
 export default function Navbar() {
 
