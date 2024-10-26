@@ -1,7 +1,13 @@
 //rutas o endpoints o url que front puede visitar
 // se requiere expres y la opcion router
 const { Router } = require('express');
-const { getAllTasks, getTask, createTask, deleteTask, updateTask, getAllUsuarios, getUsuario } = require('../controllers/tasks.controller')
+const { getAllTasks, 
+        getTask, 
+        createTask, 
+        deleteTask, 
+        updateTask, 
+        getAllUsuarios, 
+        getUsuario } = require('../controllers/tasks.controller')
 
 const router = Router();
 //Envio lo que quiero haga en la url
@@ -19,8 +25,5 @@ router.get('/usuario', getAllUsuarios)
 
 router.get('/usuario/:nombre_usuario', getUsuario)
 
-
-
-
-//
+//se esporta router para que pueda utilizarse en otros módulos
 module.exports = router;

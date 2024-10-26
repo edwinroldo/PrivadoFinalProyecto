@@ -1,18 +1,16 @@
-import { AppBar, Box, Button, Container, Toolbar, Typography } from '@mui/material'
-import {Link, useNavigate} from 'react-router-dom'
+import { AppBar, Box, Button, Container, Toolbar, Typography } from '@mui/material'  //Material UI
+import {Link, useNavigate} from 'react-router-dom'  // componente para nevegación
 
-
-
-export default function Navbar() {
+export default function Navbar() {  //navegación prinicpal
 
     //const URLLOGIN = process.env.URLLOGIN || 'http://localhost:3001/'
 
-    const navigate = useNavigate()
+    const navigate = useNavigate() //navegación
 
-    const handleClick = () => {
+    const handleClick = () => {  //boton salir envia a Login
         window.location.href = 'https://loginproyecto.onrender.com';
       };
-
+// panel de menu o navegación en principal a lista de proyectos, lista de tareas y tareas nuevas + boton salir
   return (
     <Box sx={{ flexGrow: 1 }}>
         <AppBar position='static' color='transparent'>
